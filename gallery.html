@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KASS</title>
+        <link rel="stylesheet" type="text/css" href="gallery.css">
+        
+        
+    </head>
+<body>
+     <div class="clock" id="clock">00:00:00</div>
+
+  <script src="script.js"></script>
+    <div id="s1">
+       <center> <h1 id="s2">KARENGE ADVENTIST SECONDARY SCHOOL</h1></center>
+    </div>
+
+    <div id="s3">
+        
+        <br>
+            <a href="home.html">🏠 HOME</a><br><br>
+            <a href="about us.html">🧾ABOUT US</a><br><br>
+            <a href="service.html">💕SERVICES</a><br><br>
+        <a href="registration.html">🖋️ADMISSION</a><br><br>
+        <a href="gallery.html">🌌GALLERY</a><br><br>
+            
+            <a href="academics1.html">📖ACADEMICS</a><br><br>
+        <a href="contact us.html">📞CONTACT US</a><br><br>
+    
+
+    </div>
+
+
+ </div>
+ <DIV id="rel">
+    
+    <h2>My Gallery</h2>
+
+    <div class="filter-menu">
+        <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+        <button class="filter-btn" onclick="filterGallery('nature', this)">Nature</button>
+        <button class="filter-btn" onclick="filterGallery('logo', this)">Logo</button>
+        <button class="filter-btn" onclick="filterGallery('tech', this)">Learners</button>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item learners">
+            <img src="kass1.png" alt="Nature">
+        </div>
+        <div class="gallery-item nature">
+            <img src="sabbath.png" alt="nature">
+        </div>
+        <div class="gallery-item logo">
+            <img src="nine.png" alt="Tech">
+        </div>
+        <div class="gallery-item nature">
+            <img src="kass1.png" alt="Nature">
+        </div>
+        <div class="gallery-item tech">
+            <img src="kass.png" alt="logo">
+        </div>
+        <div class="gallery-item tech">
+            <img src="cc.png" alt="Tech">
+        </div>
+        <div class="gallery-item tech">
+            <img src="kass.png" alt="logo">
+        </div>
+        <div class="gallery-item logo">
+            <img src="logo.png" alt="Tech">
+        </div>
+        <div class="gallery-item logo">
+            <img src="nine.png" alt="Tech">
+        </div>
+        <div class="gallery-item logo">
+            <img src="logo2.png" alt="Tech">
+        </div>
+    </div>
+
+    <script>
+        function filterGallery(category, btn) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hide');
+                } else {
+                    item.classList.add('hide');
+                }
+            });
+        }
+    </script>
+
+ </DIV>
+</body>
+</html>

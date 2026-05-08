@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CHRISTOPHE AI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            width: 60%;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        #chat-box {
+            background: #e9e9e9;
+            height: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .input-area {
+            text-align: center;
+        }
+
+        input {
+            width: 70%;
+            padding: 15px;
+            border-radius: 50px;
+            border: 1px solid #777;
+        }
+
+        button {
+            padding: 15px 20px;
+            border-radius: 20px;
+            border: none;
+            background: #0033cc;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user {
+            color: #0033cc;
+        }
+
+        .bot {
+            color: #008000;
+        }
+
+        #l3 {
+            color: gray;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="chat-container">
+    <h2>CHRISTOPHE AI</h2>
+
+    <div id="chat-box"></div>
+
+    <div class="input-area">
+        <input id="user-input" type="text" placeholder="Ask something about KASS...">
+        <button onclick="sendMessage()">Send</button>
+        <h5 id="l3">Christopher AI can not make a mistake</h5>
+    </div>
+</div>
+
+<script>
+    function kassAI(question) {
+        question = question.toLowerCase();
+
+        if (question.includes("where") || question.includes("location"))
+            return "KASS is located in Karenge Sector, Rwamagana District, Rwanda.";
+
+        if (question.includes("contact") || question.includes("phone"))
+            return "The known phone number for KASS is +250 788 659 851.";
+
+        if (question.includes("courses") || question.includes("options") || question.includes("offer"))
+            return "KASS offers O-Level and A-Level with options like Computer Science, Networking, Electronics, Masonry, and Accounting.";
+
+        if (question.includes("fees"))
+            return "School fees differ by class level. Please contact the school administration.";
+
+        if (question.includes("headteacher") || question.includes("head"))
+            return "The headteacher information may change. Please get the latest info from the school.";
+
+        if (question.includes("hello") || question.includes("hi"))
+            return "Hello! You can ask me anything about KARENGE Adventist Secondary School.";
+
+        if (question.includes("trades") || question.includes("tvet") || question.includes("skills"))
+            return "KASS offers trades like Building Construction, Networking, Electronics, Computer Systems, Software Development, Tailoring, and Automobile Technology.";
+
+        if (question.includes("jobs") || question.includes("careers"))
+            return "Graduates can work in IT, engineering, construction, electronics, automotive, or start their own businesses.";
+
+        return "I don't have information about that. Try asking about: location, courses, contacts, fees, tvet trades, etc.";
+    }
+    <button onclick="history.back()" id="well"> ⬅Go Back</button>
+
+    function sendMessage() {
+        let input = document.getElementById("user-input");
+        let chatBox = document.getElementById("chat-box");
+
+        let userText = input.value.trim();
+        if (userText === "") return;
+
+        chatBox.innerHTML += `<p class='user'><b>You:</b> ${userText}</p>`;
+
+        let botReply = kassAI(userText);
+        chatBox.innerHTML += `<p class='bot'><b>CHRISTOPHE AI:</b> ${botReply}</p>`;
+
+        input.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+</script>
+
+</body>
+</html>

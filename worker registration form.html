@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worker Registration Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #well{
+            background-color: aquamarine;
+            height: 20px;
+            width:100px;
+            transition: 3s;
+            border-radius: 10px;
+
+        
+        }
+        #well:hover{
+            background: linear-gradient(white,red,green,grey);
+            border-radius: 15px;
+            width: 120px;
+            height: 25px;
+        } 
+        .container{
+            background: #fff;
+            width: 420px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label{
+            font-weight: bold;
+        }
+        input, select{
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+        #christophe{
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor:pointer;
+        }
+        #christophe:hover{
+            background:#0056b3;
+        }
+        #message{
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+         #chris{
+            color: yellowgreen;
+            margin-top: 800px;
+            margin-left: -470px;
+            background-color:wheat;
+            border-radius: 20px;
+            width: 500px;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Worker Registration</h2>
+
+        <label>Full Name:</label>
+        <input type="text" id="n" placeholder="Enter full name" required>
+
+        <label>Email Address:</label>
+        <input type="email" id="e" placeholder="Enter your email address" required>
+
+        <label>Phone Number:</label>
+        <input type="number" id="p" placeholder="Enter phone number" required>
+
+        <label>Location:</label>
+        <select id="l">
+            <option value="">-- choose Where you live --</option>
+            <option value="Easten Province">Easten Province</option>
+            <option value="Western Province">Western Province</option>
+            <option value="North Province">North Province</option>
+            <option value="South Province">South Province</option>
+        </select>
+
+        <label>Course:</label>
+        <select id="c">
+            <option value="">-- Choose trade your Job --</option>
+            <option value="CHEF">CHEF</option>
+            <option value="Cleaner">cleaner</option>
+            <option value="Electronics maker">Electronics maker</option>
+            <option value="Sport coacher">Sport coacher</option>
+            <option value="Dancers coacher">Dancers coacher</option>
+
+            
+        </select>
+
+        <input type="submit" value="Register" onclick="register()" id="christophe" required>
+
+        <p id="message"></p>
+    </div>
+     <div id="chris" 
+<h3>Application guide for you!
+     Please read before registering:<br><br>
+           <ol><li> Use your real full name.</li>
+            <li> Use a correct Gmail address (t must end with @gmail.com).</li>
+            <li> Phone number must be exactly 10 digits.</li>
+            <li> Select your current location and the trade you train.</li>
+            <li>Ensure all fields are filled before submitting.</li></ol>
+            </h3>
+
+    </div>
+<button onclick="history.back()" id="well">⬅Go Back</button>
+    <script>
+        function register(){
+            let name = document.getElementById("n").value;
+            let email = document.getElementById("e").value;
+            let phone = document.getElementById("p").value;
+            let location = document.getElementById("l").value;
+            let course = document.getElementById("c").value;
+            let message = document.getElementById("message");
+
+            if(name === "" || email === "" || phone === "" || location === "" || course === ""){
+                message.style.color = "red";
+                message.innerText = "Please fill all fields to register!";
+                return;
+            }
+      if(phone.length !== 10){
+                message.style.color = "red";
+                message.innerText = "Phone number must be exactly 10 digits!";
+                return;
+            }
+          
+            
+            else{
+
+            message.style.color = "green";
+            message.innerText = "Registration Successful! Now you are registered.";}
+        }
+    </script>
+
+</body>
+</html>

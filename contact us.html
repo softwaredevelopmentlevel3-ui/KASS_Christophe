@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KASS</title>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background: #f4f6f9;
+            }
+            
+            header {
+                background: #2c3e50;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .container {
+                width: 80%;
+                margin: auto;
+                padding: 20px;
+            }
+            
+            .contact-info {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-info h2 {
+                color: #2c3e50;
+            }
+            
+            .form-box {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+            }
+            
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            
+            button {
+                background: #27ae60;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            
+            button:hover {
+                background: #219150;
+            }
+            
+            footer {
+                text-align: center;
+                padding: 10px;
+                background: #2c3e50;
+                color: white;
+                margin-top: 20px;
+            }
+            
+            #well{
+                margin-left: 240px;
+                margin-top:-468px;
+            }
+            #we{
+                margin-left: -260px;
+                margin-right: -20px;
+            }
+            </style>  
+        
+    </head>
+<body>
+
+ <div class="clock" id="clock">00:00:00</div>
+
+  <script src="script.js"></script>
+
+
+    <div id="s1">
+       <center> <img src="logo.png" id="l1"> <h1 id="s2">KARENGE ADVENTIST SECONDARY SCHOOL</h1></center>
+<div id="s3">
+        
+        <br>
+            <a href="home.html">🏠HOME</a><br><br>
+            <a href="about us.html">🧾ABOUT US</a><br><br>
+            <a href="service.html">💕SERVICES</a><br><br>
+        <a href="registration.html">🖋️ADMISSION</a><br><br>
+        <a href="gallery.html">🌌GALLERY</a><br><br>
+            
+             <a href="academics1.html">📖ACADEMICS<br><br>
+        <a href="contact us.html">📞CONTACT US</a><br><br>
+        
+
+        
+        </div>
+<div id="well">
+    
+
+<header>
+    <h1>Karenge Adventist Secondary School (KASS)</h1>
+    <p>Contact Us</p>
+</header>
+
+<div class="container">
+
+    <div class="contact-info">
+        <h2>School Contact Informration</h2>
+        <p><strong>Location:</strong> Karenge, Rwamagana, Rwanda</p>
+        <p><strong>Phone:</strong> +250 788 659 851</p>
+        <p><strong>Email:</strong> info@kasschool.rw</p>
+        <p><strong>Website:</strong> karengeadventist.business.site</p>
+        <p><strong>Instagram:</strong> KASS_12</p>
+        <p><strong>Facebook:</strong> karenge adventist secondary_school</p>
+    </div>
+
+    <div class="form-box">
+        <h2>Send Us a Message</h2>
+
+<form id="contactForm">
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <label>Message</label>
+    <textarea rows="5" placeholder="Write your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+<p id="form-status" style="color: green;"></p>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("form-status").textContent = "Message sent successfully! YOU WILL GET RESULT WE SENT FROM YOUR EMAIL ADRESS.";
+    this.reset();
+});
+</script>
+        
+    </div>
+
+</div>
+
+<footer id="we">
+    <p>&copy 2026 KASS - Karenge Adventist Secondary School</p>
+</footer>
+</div>
+</body>
+</html>

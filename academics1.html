@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KASS</title>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <style>
+            #nest{
+                margin-left: 242px;
+                margin-top: -470px;
+            }
+                    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+       
+   
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #003366;
+            margin-top: 40px;
+        }
+
+        .section-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .subjects, .levels {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .subjects .item, 
+        .levels .item {
+            flex: 1;
+            min-width: 260px;
+            background: #eaf1ff;
+            border-left: 5px solid #003366;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            background: linear-gradient(grey,white);
+            color: white;
+            padding: 10px 0;
+            margin-top: 40px;
+            margin-left: -250px;
+        }
+
+       
+        .fade {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: 0.8s;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #s3{
+            border-radius: 20px;
+        }</style>
+        
+    </head>
+<body>
+
+ <div class="clock" id="clock">00:00:00</div>
+
+  <script src="script.js"></script>
+
+
+    <div id="s1">
+       <center> <img src="logo.png" id="l1"> <h1 id="s2">KARENGE ADVENTIST SECONDARY SCHOOL</h1></center>
+<div id="s3">
+        
+        <br>
+            <a href="home.html">🏠HOME</a><br><br>
+            <a href="about us.html">🧾ABOUT US</a><br><br>
+            <a href="service.html">💕SERVICES</a><br><br>
+        <a href="registration.html">🖋️ADMISSION</a><br><br>
+        <a href="gallery.html">🌌GALLERY</a><br><br>
+            
+             <a href="academics1.html">📖ACADEMICS<br><br>
+        <a href="contact us.html">📞CONTACT US</a><br><br>
+        
+
+        
+        </div>
+<div id="nest">
+
+
+    <header>
+        <h1>Academics</h1>
+    </header>
+
+
+    <div class="container">
+
+       
+        <h2 class="fade">Academic Programs</h2>
+        <div class="section-box fade">
+            <p>
+                Our school offers a wide range of academic programs designed to empower students with knowledge, creativity, 
+                and strong problem-solving skills. The curriculum is carefully structured to meet educational standards 
+                while preparing learners for national examinations and future careers.
+            </p>
+        </div>
+
+      
+        <h2 class="fade">Subjects Offered</h2>
+        <div class="subjects">
+
+            <div class="item fade">
+                <h3>Science Subjects</h3>
+                <ul>
+                    <li>Physics</li>
+                    <li>Chemistry</li>
+                    <li>Biology</li>
+                    <li>Mathematics</li>
+                    <li>Computer Science</li>
+                </ul>
+            </div>
+
+            <div class="item fade">
+                <h3>Humanities</h3>
+                <ul>
+                    <li>History</li>
+                    <li>Geography</li>
+                    <li>Entrepreneurship</li>
+                    <li>Kinyarwanda</li>
+                    <li>English</li>
+                    <li>French</li>
+                </ul>
+            </div>
+
+            <div class="item fade">
+                <h3>Technical / Practical</h3>
+                <ul>
+                    <li>ICT practicals</li>
+                    <li>Drawing / Technical Skills</li>
+                    <li>Business Studies</li>
+                    <li>Field  Trip for tourism learners</li>
+
+                </ul>
+            </div>
+           
+        </div>
+
+        
+        <h2 class="fade">Levels of Study</h2>
+        <div class="levels">
+
+            <div class="item fade">
+                <h3>O’ Level (S1 – S3)</h3>
+                <p>
+                    Students explore all major subjects and build a strong academic foundation before choosing 
+                    their career pathways.
+                </p>
+            </div>
+ <div class="item fade">
+                <h3>TRADES(They are Technical only)</h3>
+                <ol>
+                    <li>Acounting(ACC)</li>
+                    <li>software development(SOD)</li>
+                    <li>networking(NIT)</li>
+                    <li>Automobile(AUT)
+                    </li>
+                     <li>Electronics & Telecomunication(ETE)</li>
+                    <li>Computer Science & Architecture(CSA)</li>
+                    <li>building development & Architecture(BDC)</li><br>
+All those trades are for A'level learners only & are technical
+                </ol>
+            </div>
+
+            
+        </div>
+
+
+        <h2 class="fade">Clubs & Extra-Curricular Activities</h2>
+        <div class="section-box fade">
+            <ul>
+                <li>Debate & Public Speaking Club</li>
+                <li>Science & Innovation Club</li>
+                <li>Music & Choir</li>
+                <li>Sports (Football, Volleyball, Basketball)</li>
+                <li>Environmental Club</li>
+                <li>ICT & Coding Club</li>
+            </ul>
+        </div>
+
+    
+</div>
+    <footer>
+        &copy 2026 KARENGE ADVENTIST SECONDARY SCHOOL – ALL RIGHT RESERVED TO YOU
+    </footer>
+
+    <script>
+       
+        const faders = document.querySelectorAll('.fade');
+
+        function showVisible() {
+            faders.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', showVisible);
+        window.addEventListener('load', showVisible);
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+#s1{
+    background: linear-gradient(skyblue,yellow);
+height: 100px;
+margin-top: -30px;
+margin-left: -10px;
+margin-right: -10px;
+
+}
+#s2{
+    margin-top: -10px;
+    background-image: url();
+animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  90%, 100% {
+    transform: translateY(10);
+  }
+  50% {
+    transform: translateY(9px);
+  }
+}
+#s3{
+    background-color:green;
+    width: 250px;
+    height: 471px;
+   
+    margin-left: -8px;
+    
+    margin-top: -14px;
+    
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+
+}
+a{
+    transition: 2s; 
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background:linear-gradient(skyblue,white);
+    text-decoration: none;
+    padding: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: green;
+}
+#s4{
+    
+    color: brown;
+    margin-left: px;
+    background:linear-gradient(grey,white);
+    margin-top: 0px;
+    
+}
+#s0{
+    background-image: url(welll.png);
+    margin-left: 230px;
+    margin-top: -20px;
+    height: 471px;
+    width: px;
+    color:wheat;
+    margin-bottom: -10px;
+    margin-right: -10px;
+
+}
+.s1{
+    padding: 50px;
+}
+#l1{
+    height: 60px;
+    margin-left: -900px;
+    margin-top:px;
+}
+#m1{
+    background-color: blueviolet;
+    padding: 20px;
+    
+}
+
+
+
+
+
+ 
+

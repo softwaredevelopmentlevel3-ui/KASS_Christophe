@@ -1,0 +1,61 @@
+#s1{
+    background: linear-gradient(skyblue,yellow);
+width: px;
+height: 100px;
+margin-top: -20px;
+margin-left: -10px;
+margin-right: -10px;
+}
+#s2{
+    margin-top: -10px;
+animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  90%, 100% {
+    transform: translateY(10);
+  }
+  50% {
+    transform: translateY(9px);
+  }
+}
+#s3{
+    background-color:green;
+    width: 250px;
+    height: 450px;
+   
+    margin-left: -8px;
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    
+
+
+}
+a{
+    transition: 2s;
+    color: white; 
+    text-decoration: none;
+
+}
+a:hover{
+    background:linear-gradient(skyblue,white);
+    text-decoration: none;
+    padding: 15px;
+}
+#s4{
+    
+    color: brown;
+    margin-left: px;
+    background:linear-gradient(grey,white);
+    margin-top: 10px;
+    width: px;
+    height: px;
+}
+#m2{
+    margin-top: 600px;
+    background-color: blueviolet;
+    padding: 20px;
+
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAinerRegistration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            width: 420px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+        }
+        #christophe {
+            width: 100%;
+            background: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+      
+        #chris {
+            color: #556b2f;
+            background-color: wheat;
+            border-radius: 20px;
+            width: 400px;
+            padding: 15px;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #666;
+        }
+        #well {
+            background-color: aquamarine;
+            border: none;
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+        #well:hover {
+            background: linear-gradient(white, red, green, grey);
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="history.back()" id="well"> ⬅Go Back</button>
+
+    <div class="container">
+        <h2>Trainee's Registration</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="n" placeholder="Enter full name">
+
+        <label>Email Address</label>
+        <input type="email" id="e" placeholder="Enter email">
+
+        <label>Gender</label>
+        <select id="g">
+            <option value="">-- select your gender --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label>Course</label>
+        <select id="c">
+            <option value="">-- select your trade --</option>
+            <option value="ACOUNTING">Acounting(ACC l3 up to l5 )</option>
+            <option value="Software development">software development(SOD l3 up to l5 )</option>
+            <option value="Networking">Networking(NIT l3 up to l5 )</option>
+            <option value="Automobile">Automobile(AUT l3 up to l5 )</option>
+            <option value="Electronics & Tele Comunication">Electronics & Tele Comunication(ETE l3 up to l5 )</option>
+            <option value="Computer science & Architecture(CSA)">Computer science & Architecture(CSA l3 up to l5 )</option>
+            <option value="Building & Construction development(BDC)">Building & Construction development(BDC l3 up to l5 )</option>
+            <option value="o'L">Ordinary Level(S1-S3)</option>
+        </select>
+
+        <button onclick="register()" id="christophe">Register</button>
+
+        <p id="message"></p>
+    </div>
+
+    
+    <div id="chris">
+        <h3>Application guide for you!</h3>
+        <p>Please read before registering:</p>
+        <ol> 
+            <li>Use your real full name.</li>
+            <li>Use a correct Gmail address.</li>
+            <li>Select your correct trade.</li>
+            <li>Ensure all fields are filled.</li>
+        </ol>
+    </div>
+
+    <footer>
+        &copy; Copyright KARENGE ADVENTIST SECONDARY SCHOOL
+    </footer>
+
+    <script>
+        function register() {
+        
+            let name = document.getElementById("n").value;
+            let email = document.getElementById("e").value;
+            let gender = document.getElementById("g").value;
+            let course = document.getElementById("c").value;
+            let msgDisplay = document.getElementById("message");
+
+            if (name === "" || email === "" || gender === "" || course === "") {
+                msgDisplay.style.color = "red";
+                msgDisplay.innerText = "Please fill all fields to register!";
+            } 
+            else {
+                msgDisplay.style.color = "green";
+                msgDisplay.innerText = "Registration Successful!";
+                
+                alert("Success! " + name + ", you are registered for " + course);
+            }
+        }
+    </script>
+
+</body>
+</html>
