@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>www.kass.com</title>
+    <title>CHRISTOPHE AI</title>
 
     <style>
         body {
@@ -62,24 +62,30 @@
             color: gray;
             margin-top: 10px;
         }
+        
+        #well {
+            margin-top: 10px;
+            background: #555;
+        }
     </style>
-
 </head>
 <body>
 
 <div class="chat-container">
+    <button onclick="history.back()" id="well"> ⬅ Go Back</button>
     <h2>CHRISTOPHE AI</h2>
 
     <div id="chat-box"></div>
 
     <div class="input-area">
-        <input id="user-input" type="text" placeholder="Ask something about KASS...">
+        <input id="user-input" type="text" placeholder="Ask something about KASS..." onkeypress="handleKeyPress(event)">
         <button onclick="sendMessage()">Send</button>
         <h5 id="l3">Christopher AI can not make a mistake</h5>
     </div>
 </div>
 
 <script>
+    
     function kassAI(question) {
         question = question.toLowerCase();
 
@@ -109,7 +115,14 @@
 
         return "I don't have information about that. Try asking about: location, courses, contacts, fees, tvet trades, etc.";
     }
-    <button onclick="history.back()" id="well"> ⬅Go Back</button>
+
+
+    function handleKeyPress(e) {
+        if (e.keyCode === 13) {
+            sendMessage();
+        }
+    }
+
 
     function sendMessage() {
         let input = document.getElementById("user-input");
@@ -118,11 +131,15 @@
         let userText = input.value.trim();
         if (userText === "") return;
 
+    
         chatBox.innerHTML += `<p class='user'><b>You:</b> ${userText}</p>`;
 
+
         let botReply = kassAI(userText);
+
         chatBox.innerHTML += `<p class='bot'><b>CHRISTOPHE AI:</b> ${botReply}</p>`;
 
+        
         input.value = "";
         chatBox.scrollTop = chatBox.scrollHeight;
     }
